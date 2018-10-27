@@ -9,3 +9,9 @@ local_settings.py
 db.sqlite3
 /media
 /static
+.idea/codeStyles/
+.idea/inspectionProfiles/
+.idea/markdown-navigator.xml
+.idea/vcs.xml
+jobs/migrations/0001_initial.py
+portfolio/.idea/inspectionProfiles/
