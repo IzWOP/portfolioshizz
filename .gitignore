@@ -13,5 +13,6 @@ db.sqlite3
 .idea/inspectionProfiles/
 .idea/markdown-navigator.xml
 .idea/vcs.xml
-jobs/migrations/0001_initial.py
+jobs/migrations/
 portfolio/.idea/inspectionProfiles/
+blog/migrations/
