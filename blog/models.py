@@ -8,3 +8,7 @@ class Post(models.Model):
 
 	def __str__(self):
 		return self.title
+	def summary(self):
+		return self.body[:120]
+	def datecreated(self):
+		return self.time.strftime('%b %e %Y')

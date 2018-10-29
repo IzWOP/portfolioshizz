@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
-
+from .models import Post
 def blogposts(request):
-	return render(request, 'blog/posts.html')
+	post = Post.objects
+	return render(request, 'blog/posts.html', {'post':post})

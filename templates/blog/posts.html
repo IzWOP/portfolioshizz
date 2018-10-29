@@ -5,6 +5,22 @@
 	<title>Blog</title>
 </head>
 <body>
-{%  extends 'jobs/index.html' %}
+<div class="container">
+	<h1 class="text-center pt-3">This is my Blog</h1>
+	<br />
+	<br />
+	<h2>Latest Posts</h2>
+	<hr />
+	<div>
+		{% for post in post.all %}
+		<img src="{{ post.image.url }}" width="400" height="500"/>
+		<br />
+		<h3>{{ post.title }}</h3>
+		<p>{{ post.summary }}</p>
+			<p><b>Posted:</b> {{ post.datecreated }}</p>
+		{% endfor %}
+	</div>
+</div>
+
 </body>
 </html>
