@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>IRunPy</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 {% for job in jobs.all %}
 	<img src="{{ job.image.url }}"/>
 	<p> {{ job.summary }}</p>
 {% endfor %}
-<footer class="text-muted">
-	<div class="container text-center">
-		<p> © Isaac Vazquez {% now "Y" %}</p>
-	</div>
-</footer>
-</body>
-</html>
+{% endblock content %}
