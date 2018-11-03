@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+{% load static %}
 	<meta charset="UTF-8">
 	{% if title %}
 	<title> IRunPy | {{ title }} </title>
 	{% else %}
 	<title> IRunPy </title>
+	{% endif %}
 </head>
 <body>
+<a href="{% static 'IVR.pdf' %}">Resume</a>
 {% block content %}{% endblock content %}
 <footer class="text-muted">
 	<div class="container text-center">

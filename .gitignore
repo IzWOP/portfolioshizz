@@ -8,7 +8,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 /media
-/static
+/portfolio/static
 .idea/codeStyles/
 .idea/inspectionProfiles/
 .idea/markdown-navigator.xml
