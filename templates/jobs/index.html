@@ -1,7 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
+	<br />
+	<img src="{% static 'IVP.jpg' %}"width="400" height="500"/>
+	<br />
 {% for job in jobs.all %}
-	<img src="{{ job.image.url }}"/>
+	<img src="{{ job.image.url }}" width="400" height="500"/>
 	<p> {{ job.summary }}</p>
 {% endfor %}
 {% endblock content %}
