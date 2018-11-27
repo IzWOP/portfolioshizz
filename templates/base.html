@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{% load static %}
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+{% load static %}
+	<link rel="shortcut icon" type="image/png" href="#">
 	{% if title %}
 	<title> IRunPy | {{ title }} </title>
 	{% else %}
 	<title> IRunPy </title>
 	{% endif %}
+
 </head>
 <body>
 <a href="{% static 'IVR.pdf' %}">Resume</a>
