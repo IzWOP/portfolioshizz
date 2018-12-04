@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
+{% block content %}
 <header class="header">
 	<div class="header__text-box">
 		<h1 class="heading-primary">
-			<span class="heading-primary-main">I'm Isaac</span>
+			<span class="heading-primary-main">I'm Isaac Vazquez</span><br />
 			<span class="heading-primary-sub">I am a Full Stack Developer</span>
 		</h1>
 	</div>
 </header>
-{% block content %}
+
 	<br />
 	<img src="{% static 'IVP.jpg' %}"width="400" height="500"/>
 	<br />
 {% for job in jobs.all %}
-	<img src="{{ job.image.url }}" width="400" height="500"/>
+	<img src="{{ job.image.url }}" width="200" height="200"/>
 	<p> {{ job.summary }}</p>
 {% endfor %}
 {% endblock content %}

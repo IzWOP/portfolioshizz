@@ -1,0 +1,14 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "all static",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass home/sass/main.scss home/css/style.css -w"
+  },
+  "author": "Isaac",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
