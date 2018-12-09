@@ -13,10 +13,15 @@
 	{% else %}
 	<title> IRunPy </title>
 	{% endif %}
+	<nav class="navbar navbar-transparent">
+		<div class="container">
+			<a class="navbar-name" href="#">Isaac V.</a>
+		</div>
+		<a href="{% static 'IVR.pdf' %}">Resume</a>
+	</nav>
 
 </head>
 <body>
-<a href="{% static 'IVR.pdf' %}">Resume</a>
 {% block content %}
 {% endblock content %}
 <footer class="text-muted">
