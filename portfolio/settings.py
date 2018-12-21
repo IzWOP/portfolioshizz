@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
 
