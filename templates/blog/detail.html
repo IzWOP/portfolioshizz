@@ -1,4 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-{{ blog.title }}
+	<img src="{{ blog.image.url }}" width="400" height="500">
+	<br />
+	{{ blog.title }}
+	<br />
+	{{ blog.datecreated }}
+	<br />
+	{{ blog.body }}
+	<br />
 {% endblock content %}

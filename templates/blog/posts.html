@@ -9,13 +9,11 @@
 	<hr />
 	<div>
 		{% for post in post.all %}
-		<img src="{{ post.image.url }}" width="400" height="500"/>
+			<a href="{% url 'detail' post.id %}"><img src="{{ post.image.url }}" width="400" height="500"></a>
 		<br />
 			<h3><a href="{% url 'detail' post.id %}"> {{ post.title }}</a></h3>
 		<p>{{ post.summary }}</p>
 			<p><b>Posted:</b> {{ post.datecreated }}</p>
-			<br />
-			<p>Isaac</p>
 
 		{% endfor %}
 	</div>

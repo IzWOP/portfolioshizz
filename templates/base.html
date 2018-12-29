@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% load static %}
+{% load staticfiles %}
+
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 	<link rel="shortcut icon" type="image/png" href="{% static 'img/kb2.jpg' %}">
 
 	{% if title %}
@@ -15,10 +17,13 @@
 	{% endif %}
 	<nav class="navbar navbar-transparent">
 		<div class="container">
-			<a class="navbar-name" href="#">Isaac V.</a>
+			<a class="navbar-name" href="{%  url 'index' %}">Isaac V.</a>
 		</div>
 		<div class="container">
 		<a href="{% static 'IVR.pdf' %}">Resume</a>
+		</div>
+		<div class="container">
+		<a href="{% url 'blogposts' %}">Blog</a>
 		</div>
 	</nav>
 
