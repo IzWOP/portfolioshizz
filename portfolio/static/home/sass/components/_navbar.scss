@@ -1,34 +1,10 @@
-.navbar {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  min-height: 53px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+nav-bar {
+  position: relative;
 
-  a {
-    vertical-align: middle;
+
+  &-container {
+    position: absolute;
+    margin 20px;
+    width: auto;
   }
-
-  p {
-    display: inline-block;
-    margin: 0;
-    line-height: 21px;
-    font-weight: inherit;
-    font-size: inherit;
-  }
-
-  &.navbar-transparent {
-    background-color: transparent;
-    box-shadow: none;
-    color: $color-white;
-    padding-top: 20px;
-  }
-}
-
-.navbar-name {
-  text-transform: uppercase;
-  font-size: 0.8571em;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  line-height: 1.625rem;
 }
