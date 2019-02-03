@@ -10,9 +10,11 @@
 	</div>
 </header>
 
+<div>
 {% for job in jobs.all %}
 	<a href"#"><img src="{{ job.image.url }}" width="200" height="200"/></a>
 	<p> {{ job.summary }}</p>
+	</div>
 {% endfor %}
 <div class="">
 	<h2>Blog Posts</h2>
