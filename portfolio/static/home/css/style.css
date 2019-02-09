@@ -33,6 +33,7 @@ body {
   float:right;
   padding-top: 2rem;
   font-size: 1.3rem;
+  display: inline-block;
 }
 
 .navigation__item {
