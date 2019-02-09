@@ -10,16 +10,93 @@
 	</div>
 </header>
 
-<div>
-{% for job in jobs.all %}
-	<a href"#"><img src="{{ job.image.url }}" width="200" height="200"/></a>
-	<p> {{ job.summary }}</p>
+<section>
+	<div class="row">
+	{% for job in jobs.all %}
+		<div class="col-1-of-3">
+		<a href"#"><img src="{{ job.image.url }}" width="200" height="200"/></a>
+		</div>
+	{% endfor %}
 	</div>
-{% endfor %}
-<div class="">
-	<h2>Blog Posts</h2>
-		<ul>
+	<div class="row">
+	{% for job in jobs.all %}
+		<div class="col-1-of-3">
+		<p> {{ job.summary }}</p>
+		</div>
+	{% endfor %}
+	</div>
+</section>
 
-		</ul>
+<section>
+	<div class="row">
+		<h2>Blog Posts</h2>
+		<div class="col-2-of-3">
+
+		</div>
 	</div>
+</section>
 {% endblock content %}
+
+<!--
+<section class="grid-test">
+	<div class="row">
+      <div class="col-1-of-2">
+        col 1 of 2
+      </div>
+      <div class="col-1-of-2">
+        col 2 of 2
+      </div>
+    </div>
+	<div class="row">
+		<div class="col-1-of-3">
+			col 1 of 3
+		</div>
+		<div class="col-1-of-3">
+			col 1 of 3
+		</div>
+		<div class="col-1-of-3">
+			col 1 of 3
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-1-of-3">
+			col 1 of 3
+		</div>
+		<div class="col-2-of-3">
+			col 2 of 3
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+		<div class="col-2-of-4">
+			col 2 of 4
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-1-of-4">
+			col 1 of 4
+		</div>
+		<div class="col-3-of-4">
+			col 3 of 4
+		</div>
+	</div>
+</section> -->

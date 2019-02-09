@@ -10,15 +10,21 @@
 </header>
 	<h2>Latest Posts</h2>
 	<hr />
-	<div>
-		{% for post in post.all %}
-			<a href="{% url 'detail' post.id %}"><img src="{{ post.image.url }}" width="400" height="500"></a>
-		<br />
-			<h3><a href="{% url 'detail' post.id %}"> {{ post.title }}</a></h3>
-		<p>{{ post.summary }}</p>
-			<p><b>Posted:</b> {{ post.datecreated }}</p>
 
-		{% endfor %}
-	</div>
-</div>
+<section>
+	{% for post in post.all %}
+		<div class="row">
+			<div class="col-1-of-3">
+				<a href="{% url 'detail' post.id %}"><img src="{{ post.image.url }}" width="400" height="500"></a>
+			</div>
+			<br />
+			<div class="col-2-of-3">
+				<h3><a href="{% url 'detail' post.id %}"> {{ post.title }}</a></h3>
+				<p>{{ post.summary }}</p>
+				<p><b>Posted:</b> {{ post.datecreated }}</p>
+			</div>
+		</div>
+	{% endfor %}
+</section>
+	
 {% endblock content %}

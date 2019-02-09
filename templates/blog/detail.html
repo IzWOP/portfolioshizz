@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-	<img src="{{ blog.image.url }}" width="400" height="500">
+<div class="row">
+		<img src="{{ blog.image.url }}" width="400" height="500">
+</div>
 	<br />
+	<div class="row">
 	{{ blog.title }}
 	<br />
 	{{ blog.datecreated }}
+	</div>
 	<br />
+	<div class="row">
 	{{ blog.body }}
+	</div>
 	<br />
 {% endblock content %}
