@@ -7,6 +7,7 @@
 {% load staticfiles %}
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 	<link rel="shortcut icon" type="image/png" href="{% static 'img/kb2.jpg' %}">
 
@@ -15,19 +16,26 @@
 	{% else %}
 	<title> IRunPy </title>
 	{% endif %}
+	<div class="home">
+		<a class="navigation__item-link" href="{%  url 'index' %}">Isaac V.</a>
+	</div>
 	<nav>
 		<ul class="navigation">
 			<li class="navigation__item">
-			<a class="navigation__item-link" href="{%  url 'index' %}">Isaac V.</a>
+			<a class="navigation__item-link" href="{% url 'blogposts' %}">Blog</a>
 			</li>
 			<li class="navigation__item">
 			<a class="navigation__item-link" href="{% static 'ivr.pdf' %}">Resume</a>
 			</li>
 			<li class="navigation__item">
-			<a class="navigation__item-link" href="{% url 'blogposts' %}">Blog</a>
+				<a class="icons navigation__item-link" href="https://www.twitter.com/izzyhv_" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
+			</li>
+			<li class="navigation__item">
+				<a class="icons navigation__item-link" href="https://www.instagram.com/izzyhv_" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
 			</li>
 		</ul>
 	</nav>
+
 
 </head>
 <body>
