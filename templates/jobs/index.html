@@ -9,32 +9,53 @@
 		</h1>
 	</div>
 </header>
-
-<section>
-	<div class="row">
-	{% for job in jobs.all %}
-		<div class="col-1-of-3">
-		<a href"#"><img src="{{ job.image.url }}" width="200" height="200"/></a>
+<main>
+	<section class="section-about">
+		<div class="u-center-text u-margin-bottom-medium">
+			<h2 class="heading-secondary">Yo mommas nuts</h2>
 		</div>
-	{% endfor %}
-	</div>
-	<div class="row">
-	{% for job in jobs.all %}
-		<div class="col-1-of-3">
-		<p> {{ job.summary }}</p>
+		<div class="row">
+			<div class="col-1-of-2">
+				<h3 class="heading-tertiary u-margin-bottom-small">Who am I? What's My mothafuckin name?</h3>
+				<p class="paragraph">
+					My name is Isaac Vazquez, but I go by Izzy. I am a fullstack developer that works in Django for backend technology
+					and works in SCSS, Html and Bootstrap for front-end languages. I am slowly creating more and more projects each month and becoming more and more
+					proficient in each. Each new project contains a different stack than the previous one. I am currently building an e-commerce website with secure payments and checkouts for Scallywag Apparel. Stay tuned for more upcoming projects
+					in different fields and new technologies. Thank you.
+				</p>
+			</div>
+			<div class="col-1-of-2">
+				images n shit
+			</div>
 		</div>
-	{% endfor %}
-	</div>
-</section>
+	</section>
 
-<section>
-	<div class="row">
-		<h2>Blog Posts</h2>
-		<div class="col-2-of-3">
-
+	<section>
+		<div class="row">
+		{% for job in jobs.all %}
+			<div class="col-1-of-3">
+			<a href"#"><img src="{{ job.image.url }}" width="200" height="200"/></a>
+			</div>
+		{% endfor %}
 		</div>
-	</div>
-</section>
+		<div class="row">
+		{% for job in jobs.all %}
+			<div class="col-1-of-3">
+			<p> {{ job.summary }}</p>
+			</div>
+		{% endfor %}
+		</div>
+	</section>
+
+	<section>
+		<div class="row">
+			<h2>Blog Posts</h2>
+			<div class="col-2-of-3">
+
+			</div>
+		</div>
+	</section>
+</main>
 {% endblock content %}
 
 <!--

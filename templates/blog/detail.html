@@ -2,17 +2,18 @@
 {% load static %}
 {% block content %}
 <div class="row">
+
+
 		<img src="{{ blog.image.url }}" width="400" height="500">
 </div>
 	<br />
 	<div class="row">
-	{{ blog.title }}
-	<br />
-	{{ blog.datecreated }}
-	</div>
-	<br />
-	<div class="row">
-	{{ blog.body }}
-	</div>
+		<div class="col-1-of-2">
+			<h3 class="heading-tertiary">{{ blog.title }}</h3>
+			{{ blog.datecreated }}
+				<p class="paragraph">
+					{{ blog.body }}
+				</p>
+		</div>
 	<br />
 {% endblock content %}
