@@ -8,7 +8,7 @@
     url("../../img/kb1.jpg");
   background-size: cover;
   background-position: center;
-  margin-bottom: 10rem;
+  //margin-bottom: 10rem;
 }
 
 .header__blog {
@@ -22,5 +22,13 @@
   background-size: cover;
   background-position: top;
   margin-bottom: 5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 

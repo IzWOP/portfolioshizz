@@ -38,13 +38,6 @@ body {
   line-height: 1.7;
   color: #777; }
 
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
@@ -65,24 +58,27 @@ body {
     animation: moveInRight 4s ease-out; }
 
 .heading-secondary {
-  display: inline-block;
-  margin-left: 80rem;
   font: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
+  margin-left: 55rem;
+  margin-bottom: 5rem;
   background-image: linear-gradient(to right, #f7f7f7, #000);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-  transition: all .5s; }
+  transition: all .2s; }
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-left: 4rem;
+  padding-bottom: 1rem; }
 
 .paragraph {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  margin-left: 5rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
@@ -94,8 +90,7 @@ a {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.6), rgba(255, 255, 255, 0.1)), url("../../img/kb1.jpg");
   background-size: cover;
-  background-position: center;
-  margin-bottom: 10rem; }
+  background-position: center; }
 
 .header__blog {
   position: top;
@@ -105,8 +100,15 @@ a {
   background-position: top;
   margin-bottom: 5rem; }
 
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
 .row {
-  max-width: 160rem;
+  max-width: 140rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -161,5 +163,4 @@ a {
 
 .section-about {
   background-color: #f7f7f7;
-  margin-top: -10rem;
-  padding: 20rem 0; }
+  padding: 10rem 0; }
