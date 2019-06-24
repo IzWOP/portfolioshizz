@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<div class="hero">
+	<div class="hero__cont">
+		<div class="hero__title">
+			Welcome.
+		</div>
+	</div>
+</div>
+
+
 <header class="header__index">
 	<div class="header__text-box">
 		<h1 class="heading-primary">
@@ -11,50 +20,57 @@
 </header>
 {#<main>#}
 
-	<section class="section-about">
-		<div class="u-center-text u-margin-bottom-big">
-			<h2 class="heading-secondary">Meet the Creator</h2>
+<section class="section__about">
+	<div class="">
+		<h2 class="heading-secondary">Meet the Creator</h2>
+	</div>
+	<div class="row">
+		<div class="col-1-of-2">
+			<h3 class="heading-tertiary">Who am I? What do I do?</h3>
+			<p class="section__about-paragraph">
+				My name is Isaac Vazquez, but I go by Izzy. I am a fullstack developer that works in Django for backend
+				technology
+				and works in SCSS, Html and Bootstrap for front-end languages. I am slowly creating more and more projects each
+				month and becoming more and more
+				proficient in each. Each new project contains a different stack than the previous one. I am currently building
+				an e-commerce website with secure payments and checkouts for Scallywag Apparel. Stay tuned for more upcoming
+				projects
+				in different fields and new technologies. Thank you.</p>
 		</div>
-		<div class="row">
-			<div class="col-1-of-2">
-				<h3 class="heading-tertiary u-margin-bottom-medium">Who am I? What do I do?</h3>
-				<p class="about__paragraph">
-					My name is Isaac Vazquez, but I go by Izzy. I am a fullstack developer that works in Django for backend technology
-					and works in SCSS, Html and Bootstrap for front-end languages. I am slowly creating more and more projects each month and becoming more and more
-					proficient in each. Each new project contains a different stack than the previous one. I am currently building an e-commerce website with secure payments and checkouts for Scallywag Apparel. Stay tuned for more upcoming projects
-					in different fields and new technologies. Thank you.</p>
-			</div>
-			<div class="col-1-of-2">
-				<img src="{% static 'img/iv.JPG' %}" class="uglyme" />
-			</div>
+		<div class="section__about-image">
+			<img src="{% static 'img/iv.JPG' %}" class="uglyme" />
 		</div>
-	</section>
+	</div>
+</section>
 
-	<section class="project__section">
-		<div class="row">
+<section class="project__section">
+	<div class="row">
 		{% for job in jobs.all %}
-			<div class="col-1-of-3 project__pictures ">
-			<a href"#"><img src="{{ job.image.url }}" class="{% cycle 'project__pictures-1' 'project__pictures-2' 'project__pictures-3' 'project__pictures-4' %}" width="200" height="200"/></a>
-			</div>
-		{% endfor %}
+		<div class="col-1-of-3 project__pictures ">
+			<a href"#"><img src="{{ job.image.url }}"
+					class="{% cycle 'project__pictures-1' 'project__pictures-2' 'project__pictures-3' 'project__pictures-4' %}"
+					width="200" height="200" /></a>
 		</div>
-		<div class="row">
+		{% endfor %}
+	</div>
+	<div class="row">
 		{% for job in jobs.all %}
-			<div class="col-1-of-3 project__text">
-			<p class="{% cycle 'project__text-1' 'project__text-2' 'project__text-3' 'project__text-4' %}"> {{ job.summary }}</p>
-			</div>
+		<div class=" project__text">
+			<p class="{% cycle 'project__text-1' 'project__text-2' 'project__text-3' 'project__text-4' %}"> {{ job.summary }}
+			</p>
+		</div>
 		{% endfor %}
-		</div>
-	</section>
+	</div>
+</section>
 
-	<section class="blogposts">
-		<div class="row">
-			<h2 class="blog_post-title">Blog Posts</h2>
-			<div class="col-2-of-3">
+<section class="blogposts">
+	<div class="row">
+		<h2 class="blog_post-title">Blog Posts</h2>
+		<div class="col-2-of-3">
 
-			</div>
 		</div>
-	</section>
+	</div>
+</section>
 {#</main>#}
 {% endblock content %}
 

@@ -6,10 +6,13 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
+@font-face {
+  font-family: 'EmpireSamgor';
+  src: url('../../fonts/EmpireSamgor.ttf')  format("truetype"),
+       local('EmpireSamgor');
 }
 
-body {
+html {
+  font-size: 62.5%; //font size to 10px
   box-sizing: border-box;
 }

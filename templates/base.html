@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115651779-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115651779-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-115651779-1');
-</script>
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-115651779-1');
+	</script>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% load static %}
-{% load staticfiles %}
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load static %}
+	{% load staticfiles %}
+	<!--Font-->
+	<link rel="stylesheet" href="https://use.typekit.net/pjo1cyw.css">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 	<link rel="shortcut icon" type="image/png" href="{% static 'img/kb2.jpg' %}">
 
@@ -25,35 +31,37 @@
 	{% else %}
 	<title> IRunPy </title>
 	{% endif %}
+</head>
+
+<body>
 	<div class="home">
 		<a class="navigation__item-link" href="{%  url 'index' %}">Izzy V.</a>
 	</div>
-	<nav>
-		<ul class="navigation">
-			<li class="navigation__item">
-			<a class="icons navigation__item-link" href="{% url 'blogposts' %}"><i class="far fa-newspaper"></i>  Blog</a>
-			</li>
-			<li class="icons navigation__item">
-			<a class="navigation__item-link" href="{% static 'ivr.pdf' %}"><i class="fas fa-file-alt"></i>  Resume</a>
-			</li>
-			<li class="navigation__item">
-				<a class="icons navigation__item-link" href="https://www.twitter.com/izzyhv_" target="_blank"><i class="fab fa-twitter fa-1x"></i>  Twitter</a>
-			</li>
-			<li class="navigation__item">
-				<a class="icons navigation__item-link" href="https://www.instagram.com/izzyhv_" target="_blank"><i class="fab fa-instagram fa-1x"></i>  Instagram</a>
-			</li>
-		</ul>
-	</nav>
+	<!-- <nav>
+				<ul class="navigation">
+					<li class="navigation__item">
+					<a class="icons navigation__item-link" href="{% url 'blogposts' %}"><i class="far fa-newspaper"></i>  Blog</a>
+					</li>
+					<li class="icons navigation__item">
+					<a class="navigation__item-link" href="{% static 'ivr.pdf' %}"><i class="fas fa-file-alt"></i>  Resume</a>
+					</li>
+					<li class="navigation__item">
+						<a class="icons navigation__item-link" href="https://www.twitter.com/izzyhv_" target="_blank"><i class="fab fa-twitter fa-1x"></i>  Twitter</a>
+					</li>
+					<li class="navigation__item">
+						<a class="icons navigation__item-link" href="https://www.instagram.com/izzyhv_" target="_blank"><i class="fab fa-instagram fa-1x"></i>  Instagram</a>
+					</li>
+				</ul>
+			</nav> -->
 
 
-</head>
-<body>
-{% block content %}
-{% endblock content %}
-<footer class="text-muted">
-	<div class="container text-center">
-		<p> © Isaac Vazquez {% now "Y" %}</p>
-	</div>
-</footer>
+	{% block content %}
+	{% endblock content %}
+	<footer class="text-muted">
+		<div class="container text-center">
+			<p> © Isaac Vazquez {% now "Y" %}</p>
+		</div>
+	</footer>
 </body>
+
 </html>
